@@ -1,0 +1,53 @@
+<input type="number" name="num" [(ngModel)]="num">
+<button (click)="getData()">Get Data</button>
+&nbsp;
+&nbsp;
+<button (click)=" getAllData()">Get AllData</button>
+
+<div *ngIf="show" >
+    <table border="1">
+
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{Post.id}}</td>
+        </tr>
+
+        <tr>
+            <th>Tittle</th>
+            <td>{{Post.id}}</td>
+        </tr>
+
+        <tr>
+            <th>Body</th>
+            <td>{{Post.body}}</td>
+        </tr>
+            
+            
+        </tbody>
+    </table>
+
+</div>
+
+<div *ngIf="allData.length">
+    <h3>All Data:</h3>
+    <ul>
+        <li *ngFor="let Post of allData">
+        <table border="1" >
+            <tr>
+            <th>Id</th>
+            <td>{{Post.id}}</td>
+            </tr>
+            <tr>
+            <th>Title</th>
+            <td>{{Post.title}}</td>
+        </tr>
+        <tr>
+            <th>Body</th>
+            <td>{{Post.body}}</td>
+        </tr>
+        </table><br>
+    </li>
+    </ul>
+  </div>
+  
